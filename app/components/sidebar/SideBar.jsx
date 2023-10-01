@@ -56,7 +56,10 @@ const Sidebar = ({ page, setPage, user }) => {
 					{user
 						? user.balance.map((i) => {
 								return (
-									<p className="userCurrency">
+									<p
+										key={i[Object.keys(i)[0]]}
+										className="userCurrency"
+									>
 										{i[Object.keys(i)[0]]}{" "}
 										{Object.keys(i)[0]}
 									</p>
