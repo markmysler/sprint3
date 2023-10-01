@@ -3,7 +3,6 @@ import "./homeBankingWindows.css";
 import Image from "next/image";
 
 function Cuentas({ user }) {
-	console.log(user);
 	return (
 		<div className="cuentaPage">
 			<Head>
@@ -17,7 +16,7 @@ function Cuentas({ user }) {
 						alt="Foto de perfil"
 						width={120}
 						height={120}
-						loading="lazy"
+						priority={true}
 						className="cuentaImg"
 					/>
 				</div>
@@ -38,7 +37,8 @@ function Cuentas({ user }) {
 					{user.balance.map((i) => {
 						return (
 							<p key={Object.keys(i)[0]} className="userCurrency">
-								{Object.keys(i)[0]}: {i[Object.keys(i)[0]]}
+								{Object.keys(i)[0]}:{" "}
+								{i[Object.keys(i)[0]].toLocaleString("de-DE")}
 							</p>
 						);
 					})}

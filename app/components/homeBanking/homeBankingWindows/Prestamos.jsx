@@ -1,6 +1,22 @@
 import Head from "next/head";
 
 function Prestamos({ user, setUser }) {
+	function updateArray(arr, key, value) {
+		// Find the object in the array that has the key
+		let obj = arr.find((o) => o.hasOwnProperty(key));
+
+		if (obj) {
+			// If the object exists, add the value to the existing value
+			obj[key] += Number(value);
+		} else {
+			// If the object does not exist, create a new object and add it to the array
+			let newObj = {};
+			newObj[key] = Number(value);
+			arr.push(newObj);
+		}
+
+		return arr;
+	}
 	function handleSubmit(e) {
 		e.preventDefault();
 		const { monto, plazo } = e.target;
@@ -9,7 +25,7 @@ function Prestamos({ user, setUser }) {
 				`Solicitar un prestamo de $${monto.value} a ${plazo.value} meses?`
 			)
 		) {
-			user.balance += Number(monto.value);
+			updateArray(user.balance, "ARS", monto.value);
 			window.localStorage.removeItem(user.email);
 			window.localStorage.setItem(user.email, JSON.stringify(user));
 			monto.value = "";

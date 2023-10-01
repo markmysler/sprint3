@@ -69,6 +69,7 @@ function Convertidor({ user, rates }) {
 						JSON.stringify(user)
 					);
 					alert("Transaccion exitosa");
+					monto.value = "";
 				}
 			} else {
 				alert("Saldo insuficiente");

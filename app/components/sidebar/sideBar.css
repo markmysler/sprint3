@@ -74,7 +74,6 @@ body {
 	padding: var(--padding);
 	margin: 0 auto;
 	border-radius: 100%;
-	width: 50%;
 	margin-bottom: 5%;
 }
 
@@ -148,7 +147,7 @@ body {
 }
 
 .menu-expanded #profile #photo {
-	width: 20vw;
+	width: 40vw;
 }
 
 .menu-expanded #profile #name {
@@ -194,14 +193,31 @@ ul {
 	font-size: medium;
 }
 
-@media screen and (min-width: 768px) {
-	#sidemenu #profile #photo img {
-		width: 7vw;
+@media screen and (min-width: 425px) {
+	#sidemenu #profile #photo {
+		width: 30vw;
 	}
+}
+@media screen and (min-width: 768px) {
+	.menu-expanded {
+		width: 35vw;
+	}
+	#sidemenu #profile #photo {
+		width: 18vw;
+	}
+}
+@media screen and (min-width: 1024px) {
+	#sidemenu #profile #photo {
+		width: 13vw;
+	}
+}
+@media screen and (min-width: 1200px) {
 	#sidemenu #profile #photo {
 		width: 10vw;
 	}
-	.menu-expanded {
-		width: 30vw;
+}
+@media screen and (min-width: 1800px) {
+	#sidemenu #profile #photo {
+		width: 8vw;
 	}
 }

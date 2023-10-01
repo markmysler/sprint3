@@ -60,7 +60,9 @@ const Sidebar = ({ page, setPage, user }) => {
 										key={i[Object.keys(i)[0]]}
 										className="userCurrency"
 									>
-										{i[Object.keys(i)[0]]}{" "}
+										{i[Object.keys(i)[0]].toLocaleString(
+											"de-DE"
+										)}{" "}
 										{Object.keys(i)[0]}
 									</p>
 								);
@@ -101,6 +103,13 @@ const Sidebar = ({ page, setPage, user }) => {
 					onClick={() => switchView("convertidor")}
 					disabled={false}
 				/>
+				<MenuItem
+					icon={punto}
+					title="Contacto"
+					onClick={() => switchView("contacto")}
+					disabled={false}
+				/>
+
 				<div className="item-separator"></div>
 				<MenuItem
 					icon={punto}
