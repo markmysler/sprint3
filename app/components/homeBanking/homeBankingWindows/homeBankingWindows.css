@@ -1,0 +1,122 @@
+.inicioPage,
+.loginPage,
+.signUpPage,
+.cotizacionesPage,
+.cuentaPage {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	color: white;
+}
+.loginForm,
+.signUpForm,
+.transferenciasForm,
+.pagosForm,
+.prestamoForm,
+.cotizacionesForm {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 15rem;
+	align-items: center;
+}
+.loginForm input,
+.signUpForm input,
+.transferenciasForm input,
+.pagosForm input,
+.prestamoForm input,
+.conversionInput,
+#destinatario {
+	width: 15rem;
+	border-radius: 5px;
+	padding: 3px;
+}
+.loginForm button,
+.signUpForm button,
+.transferenciasForm button,
+.pagosForm button,
+.prestamoForm button,
+.convertidorOptions button {
+	width: 10rem;
+	height: 2rem;
+	border-radius: 10px;
+	background-color: rgb(27, 158, 40);
+	border-color: rgba(20, 167, 35, 0.496);
+	color: white;
+}
+.loginPage h1,
+.signUpPage h1,
+#transferenciasH1,
+#pagosH1,
+#prestamoH1 {
+	font-size: x-large;
+	color: white;
+}
+
+.buttonDiv {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.buttonDiv button {
+	width: 8rem;
+	height: 2rem;
+	border-radius: 10px;
+}
+.buttonDiv button a {
+	text-decoration: none;
+	color: white;
+}
+#button1 {
+	background-color: rgb(27, 158, 40);
+	border-color: rgba(20, 167, 35, 0.496);
+}
+#button2 {
+	background-color: rgb(31, 121, 40);
+	border-color: rgb(20, 167, 35, 0.4);
+}
+.homeBankingDiv {
+	margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.cuentaImg {
+	width: 8rem;
+}
+.cuentaImgDiv {
+	background-color: white;
+	border-radius: 50%;
+	padding: 2% 4% 4% 4%;
+}
+#balanceOptions {
+	width: 40%;
+}
+.convertidorOptions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.convertidorOptions p {
+	padding: 2%;
+}
+.convertidorOptions select {
+	width: 5rem;
+}
+.convertidorOptions button {
+	display: block;
+}
+
+.userCurrency {
+	font-size: medium;
+	margin: 1%;
+}
+.balanceTitulo {
+	margin: 1%;
+}
